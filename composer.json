@@ -1,0 +1,13 @@
+{
+    "name": "wiz/payment-gateway-bundle",
+    "description": "A Symfony2 Bundle to help you handle the payment requirement.",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "JackLam",
+            "email": "jack@wizmacau.com"
+        }
+    ],
+    "require": {}
+}
