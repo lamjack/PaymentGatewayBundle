@@ -11,7 +11,9 @@
     ],
     "require": {},
     "autoload": {
-        "psr-4": { "Wiz\\PaymentGateWayBundle\\": "" }
+        "psr-4": {
+            "Wiz\\PaymentGateWayBundle\\": ""
+        }
     },
     "extra": {
         "branch-alias": {
