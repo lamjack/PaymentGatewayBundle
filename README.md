@@ -1,5 +1,6 @@
 # WizPaymentGatewayBundle
 
+[![Build Status](https://travis-ci.org/lamjack/PaymentGatewayBundle.svg?branch=master)](https://travis-ci.org/lamjack/PaymentGatewayBundle)
 [![Latest Stable Version](https://poser.pugx.org/wiz/payment-gateway-bundle/version.png)](https://packagist.org/packages/wiz/payment-gateway-bundle)
 [![Total Downloads](https://poser.pugx.org/wiz/payment-gateway-bundle/d/total.png)](https://packagist.org/packages/wiz/payment-gateway-bundle)
 [![Latest Unstable Version](https://poser.pugx.org/wiz/payment-gateway-bundle/v/unstable)](//packagist.org/packages/wiz/payment-gateway-bundle)
