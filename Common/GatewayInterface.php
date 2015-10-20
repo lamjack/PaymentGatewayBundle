@@ -31,4 +31,11 @@ interface GatewayInterface
      * @return string
      */
     public function getShortName();
+
+    /**
+     * Initialize gateway with parameters
+     *
+     * @param array $paramaters
+     */
+    public function initialize(array $paramaters = array());
 }

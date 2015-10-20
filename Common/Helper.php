@@ -12,7 +12,7 @@ namespace Wiz\PaymentGatewayBundle\Common;
  */
 final class Helper
 {
-    const GATEWAY_NAMESPACE = 'Wiz\\PaymentGatewayBundle\\';
+    const GATEWAY_NAMESPACE = 'Wiz\\PaymentGatewayBundle\\Gateway\\';
     const GATEWAY_SUFFIX = 'Gateway';
 
     /**
