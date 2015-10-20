@@ -59,6 +59,15 @@ class GatewayFactoryTest extends AbstractTestCase
     /**
      *
      */
+    public function testGetSupportedGateways()
+    {
+        $gateways = $this->factory->getSupportedGateways();
+        $this->assertContains('alipay', $gateways);
+    }
+
+    /**
+     *
+     */
     protected function setUp()
     {
         $this->factory = new GatewayFactory();

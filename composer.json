@@ -12,7 +12,8 @@
     "require": {
         "php": ">=5.3.2",
         "lib-curl": ">=7.10.0",
-        "lib-openssl": ">=0.9.6"
+        "lib-openssl": ">=0.9.6",
+        "jacklam/php-tools": "dev-master"
     },
     "require-dev": {
         "mockery/mockery": "~0.9",
