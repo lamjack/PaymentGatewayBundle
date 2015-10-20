@@ -13,7 +13,7 @@ The bundle is released under the [MIT License](Resources/meta/LICENSE).
 ## Support
 
 If you are having general issues with WizPaymentGatewayBundle, we suggest posting on
-[Stack Overflow](https://forum.symfony.cn/).
+[Symfony中国社区](https://forum.symfony.cn/).
 
 If you believe you have found a bug, please report it using the [GitHub issue tracker](https://github.com/lamjack/PaymentGatewayBundle/issues),
 or better yet, fork the library and submit a pull request.
