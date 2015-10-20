@@ -26,7 +26,7 @@ final class Helper
      */
     public static function getGatewayShortName($className)
     {
-        if (0 === strpos(self::GATEWAY_NAMESPACE, '\\')) {
+        if (0 === strpos($className, '\\')) {
             $className = substr($className, 1);
         }
 
@@ -63,6 +63,6 @@ final class Helper
             $shortName .= '\\';
         }
 
-        return sprintf('\\%s\\%s', self::GATEWAY_NAMESPACE, $shortName . self::GATEWAY_SUFFIX);
+        return '\\' . self::GATEWAY_NAMESPACE . $shortName . self::GATEWAY_SUFFIX;
     }
 }
