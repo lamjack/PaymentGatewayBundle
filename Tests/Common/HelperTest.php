@@ -16,10 +16,55 @@ class HelperTest extends \PHPUnit_Framework_TestCase
     /**
      *
      */
+    public function testGetGatewayShortNameSimple()
+    {
+        $shortName = Helper::getGatewayShortName('Wiz\\PaymentGatewayBundle\\Alipay\\Gateway');
+        $this->assertSame('Alipay', $shortName);
+    }
+
+    /**
+     *
+     */
+    public function testGetGatewayShortNameSimpleLeadingSlash()
+    {
+        $shortName = Helper::getGatewayShortName('\\Wiz\\PaymentGatewayBundle\\Alipay\\Gateway');
+        $this->assertSame('Alipay', $shortName);
+    }
+
+    /**
+     *
+     */
+    public function testGetGatewayShortNameUnderscore()
+    {
+        $shortName = Helper::getGatewayShortName('Wiz\\PaymentGatewayBundle\\Alipay\\ExpressGateway');
+        $this->assertSame('Alipay_Express', $shortName);
+    }
+
+    /**
+     *
+     */
+    public function testGetGatewayShortNameUnderscoreLeadingSlash()
+    {
+        $shortName = Helper::getGatewayShortName('\\Wiz\\PaymentGatewayBundle\\Alipay\\ExpressGateway');
+        $this->assertSame('Alipay_Express', $shortName);
+    }
+
+    /**
+     *
+     */
+    public function testGetGatewayShortNameCustomGateway()
+    {
+        $shortName = Helper::getGatewayShortName('\\Custom\\Alipay');
+        $this->assertSame('\\Custom\\Alipay', $shortName);
+    }
+
+    /**
+     *
+     */
     public function testGetGatewayClassNameExistingNamespace()
     {
         $class = Helper::getGatewayClassName('\\Wiz\\PaymentGatewayBundle\\Alipay\\WapExpressGateway');
-        $this->assertEquals('\\Wiz\\PaymentGatewayBundle\\Alipay\\WapExpressGateway', $class);
+        $this->assertSame('\\Wiz\\PaymentGatewayBundle\\Alipay\\WapExpressGateway', $class);
     }
 
     /**
@@ -28,7 +73,7 @@ class HelperTest extends \PHPUnit_Framework_TestCase
     public function testGetGatewayClassNameExistingNamespaceUnderscore()
     {
         $class = Helper::getGatewayClassName('\\WapExpressGateway');
-        $this->assertEquals('\\WapExpressGateway', $class);
+        $this->assertSame('\\WapExpressGateway', $class);
     }
 
     /**
@@ -37,7 +82,7 @@ class HelperTest extends \PHPUnit_Framework_TestCase
     public function testGetGatewayClassNameSimple()
     {
         $class = Helper::getGatewayClassName('Alipay');
-        $this->assertEquals('\\Wiz\\PaymentGatewayBundle\\Alipay\\Gateway', $class);
+        $this->assertSame('\\Wiz\\PaymentGatewayBundle\\Alipay\\Gateway', $class);
     }
 
     /**
@@ -46,7 +91,7 @@ class HelperTest extends \PHPUnit_Framework_TestCase
     public function testGetGatewayClassNamePartialNamespace()
     {
         $class = Helper::getGatewayClassName('Alipay\\WapExpress');
-        $this->assertEquals('\\Wiz\\PaymentGatewayBundle\\Alipay\\WapExpressGateway', $class);
+        $this->assertSame('\\Wiz\\PaymentGatewayBundle\\Alipay\\WapExpressGateway', $class);
     }
 
     /**
@@ -55,6 +100,6 @@ class HelperTest extends \PHPUnit_Framework_TestCase
     public function testGetGatewayClassNameUnderscoreNamespace()
     {
         $class = Helper::getGatewayClassName('Alipay_WapExpress');
-        $this->assertEquals('\\Wiz\\PaymentGatewayBundle\\Alipay\\WapExpressGateway', $class);
+        $this->assertSame('\\Wiz\\PaymentGatewayBundle\\Alipay\\WapExpressGateway', $class);
     }
 }
