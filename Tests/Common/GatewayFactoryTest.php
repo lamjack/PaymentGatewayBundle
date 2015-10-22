@@ -53,7 +53,7 @@ class GatewayFactoryTest extends AbstractTestCase
      */
     public function testCreateInvalid()
     {
-        $gateway = $this->factory->create('Invalid');
+        $this->factory->create('Invalid');
     }
 
     /**
@@ -62,7 +62,7 @@ class GatewayFactoryTest extends AbstractTestCase
     public function testGetSupportedGateways()
     {
         $gateways = $this->factory->getSupportedGateways();
-        $this->assertContains('alipay', $gateways);
+        $this->assertContains('Alipay', $gateways);
     }
 
     /**

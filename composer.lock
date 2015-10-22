@@ -4,9 +4,52 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a7c4df85a7c2b9117e31431e26eb83ba",
-    "content-hash": "25ad8e19d050da34fd13948ab1b47e37",
-    "packages": [],
+    "hash": "c1d7c67d713e6b23e2a196a3274b15a3",
+    "content-hash": "460bec88e40b67017eaaeb0c4b838f56",
+    "packages": [
+        {
+            "name": "jacklam/php-tools",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lamjack/php-tools.git",
+                "reference": "3e19d7b60802452cf55a270e95d501952a637299"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lamjack/php-tools/zipball/3e19d7b60802452cf55a270e95d501952a637299",
+                "reference": "3e19d7b60802452cf55a270e95d501952a637299",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "JackLam",
+                    "email": "linjue@wilead.com",
+                    "homepage": "http://blog.wilead.com"
+                },
+                {
+                    "name": "WIZ",
+                    "email": "it@wizmacau.com",
+                    "homepage": "http://wizmacau.com"
+                }
+            ],
+            "description": "PHP useful tools library.",
+            "time": "2015-10-18 04:18:25"
+        }
+    ],
     "packages-dev": [
         {
             "name": "doctrine/instantiator",
@@ -1072,7 +1115,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "jacklam/php-tools": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

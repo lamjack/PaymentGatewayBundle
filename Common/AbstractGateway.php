@@ -6,11 +6,11 @@
 
 namespace Wiz\PaymentGatewayBundle\Common;
 
-use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\HttpFoundation\ParameterBag;
 
 /**
  * Class AbstractGateway
+ *
  * @package Wiz\PaymentGatewayBundle\Common
  */
 abstract class AbstractGateway implements GatewayInterface
@@ -20,6 +20,9 @@ abstract class AbstractGateway implements GatewayInterface
      */
     protected $parameters;
 
+    /**
+     *
+     */
     function __construct()
     {
         $this->initialize();
@@ -29,6 +32,7 @@ abstract class AbstractGateway implements GatewayInterface
      * Initialize this gateway with default parameters
      *
      * @param array $paramaters
+     *
      * @return $this
      */
     public function initialize(array $paramaters = array())
@@ -45,5 +49,48 @@ abstract class AbstractGateway implements GatewayInterface
     public function getShortName()
     {
         return Helper::getGatewayShortName(get_class($this));
+    }
+
+    /**
+     * @param string $key
+     * @param mixed  $value
+     *
+     * @return $this
+     */
+    protected function setParameter($key, $value)
+    {
+        $this->parameters->set($key, $value);
+        return $this;
+    }
+
+    /**
+     * @param string $key
+     *
+     * @return mixed
+     */
+    protected function getParameter($key)
+    {
+        return $this->parameters->get($key);
+    }
+
+    /**
+     * @param array $parameters
+     *
+     * @return $this
+     */
+    protected function setParameters($parameters = array())
+    {
+        foreach ($parameters as $k => $v) {
+            $this->setParameter($k, $v);
+        }
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    protected function getParameters()
+    {
+        return $this->parameters->all();
     }
 }

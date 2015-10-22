@@ -40,7 +40,7 @@ class GatewayFactory
      */
     public function getSupportedGateways()
     {
-        $composer = Json::decode(file_get_contents(__DIR__ . '/../composer.json'));
+        $composer = Json::decode(file_get_contents(__DIR__ . '/../composer.json'), true);
         return $composer['extra']['gateways'];
     }
 }
